@@ -1,0 +1,15 @@
+{
+  "dockerImageBuilder": "cimg/base:stable-20.04",
+  "inputs": [
+    {
+      "label": "Number one : ",
+      "name": "number_one",
+      "type": "text"
+    },
+    {
+      "label": "Number two : ",
+      "name": "number_two",
+      "type": "text"
+    }
+  ]
+}

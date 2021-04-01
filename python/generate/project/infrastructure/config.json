@@ -1,0 +1,100 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Project name:",
+      "name": "rit_project_name",
+      "type": "text"
+    },
+    {
+      "label": "Continuous Integration tool:",
+      "name": "rit_pipeline_tool",
+      "type": "text",
+      "items": [
+        "BUDDY",
+        "BUILDKITE",
+        "CIRCLECI",
+        "GITLABCI",
+        "GOCD",
+        "INTEGRITY",
+        "JENKINS",
+        "TEAMCITY",
+        "TRAVISCI"
+      ]
+    },
+    {
+      "label": "Source Code Managenemt tool:",
+      "name": "rit_commit_tool",
+      "type": "text",
+      "items": [
+        "BIT-BUCKET",
+        "CVS",
+        "GITHUB",
+        "GITLAB",
+        "MERCURIAL",
+        "MONOTONE",
+        "SVN"
+      ]
+    },
+    {
+      "label": "Build tool:",
+      "name": "rit_build_tool",
+      "type": "text",
+      "items": [
+        "ANSIBLE",
+        "APACHE ANT",
+        "CHEF",
+        "DOCKER",
+        "GRADLE",
+        "MAVEN",
+        "PUPPET",
+        "VAGRANT"
+      ]
+    },
+    {
+      "label": "Continuous Testing tool:",
+      "name": "rit_test_tool",
+      "type": "text",
+      "items": [
+        "APPIUM",
+        "EGGPLANT",
+        "KATALON STUDIO",
+        "SELENIUM",
+        "TESTSIGMA",
+        "TOSCA",
+        "UNIFIED FUNCTIONAL TESTER",
+        "WATIR"
+      ]
+    },
+    {
+      "label": "Deploy tool:",
+      "name": "rit_deploy_tool",
+      "type": "text",
+      "items": [
+        "AWS",
+        "AZURE",
+        "CHEF",
+        "DOCKER",
+        "GOOGLE CLOUD PLATFORM",
+        "HEROKU",
+        "KUBERNETES",
+        "VMWARE"
+      ]
+    },
+    {
+      "label": "Operation tool:",
+      "name": "rit_operation_tool",
+      "type": "text",
+      "items": [
+        "BIGPANDA",
+        "DATADOG",
+        "DYNATRACE",
+        "GRAPHITE",
+        "LOGGLY",
+        "PROMETHEUS",
+        "SNYK",
+        "ZABBIX"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "name" : "search",
+      "type" : "text",
+      "default" : "stats by country",
+      "items" : ["stats by country", "graph by country", "top N"],
+      "label" : "Search type: "
+    },
+    {
+      "name" : "value",
+      "type" : "text",
+      "label" : "Search value: ",
+      "cache" : {
+        "active": true,
+        "qtd" : 5,
+        "newLabel" : "Type new value. "
+      }
+    }
+  ]
+}

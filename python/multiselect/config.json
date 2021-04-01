@@ -1,0 +1,19 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "What do you want to automate? ",
+      "name": "rit_input_multiselect",
+      "tutorial": "Select what you want to automate with Ritchie",
+      "required": true,
+      "type": "multiselect",
+      "items": [
+        "daily tasks",
+        "workflows",
+        "toils",
+        "everything",
+        "incidents"
+      ]
+    }
+  ]
+}

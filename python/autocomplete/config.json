@@ -1,0 +1,12 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Path: ",
+      "name": "rit_input_path",
+      "type": "path",
+      "required": true,
+      "tutorial": "Ex: /Users/Dennis-Ritchie"
+    }
+  ]
+}

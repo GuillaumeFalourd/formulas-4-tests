@@ -1,0 +1,17 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-kotlin-jdk8-builder",
+  "inputs": [
+    {
+      "label": "Number 1: ",
+      "name": "rit_number_one",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "label": "Number 2: ",
+      "name": "rit_number_two",
+      "required": true,
+      "type": "text"
+    }
+  ]
+}

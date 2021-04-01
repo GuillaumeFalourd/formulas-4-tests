@@ -1,0 +1,26 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Absolute image path:",
+      "name": "rit_image_path",
+      "type": "text",
+      "tutorial": "Example: /Users/dennisritchie/test.jpg",
+      "required": true,
+      "cache": {
+        "active": true,
+        "qty": 5,
+        "newLabel": "Type another path:"
+      }
+    },
+    {
+      "label": "What is the real object width? ",
+      "name": "rit_real_width",
+      "type": "text",
+      "pattern": {
+            "regex": "[0-9]",
+            "mismatchText": "Only a numerical value is allowed here (ex: 20)"
+      }
+    }
+  ]
+}

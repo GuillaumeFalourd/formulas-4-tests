@@ -1,0 +1,4 @@
+{
+	"short": "AWS Cli Run Command",
+	"long": "Run a given command on a AWS CLI"
+}

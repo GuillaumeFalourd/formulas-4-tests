@@ -1,0 +1,86 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "label": "Type the professional name: ",
+      "name": "rit_name",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "newLabel": "Type other name: ",
+        "qty": 3
+      }
+    },
+    {
+      "label": "Select the professional profile: ",
+      "name": "rit_profile",
+      "type": "text",
+      "items": [
+        "BACK-END",
+        "FRONT-END",
+        "OPERATION",
+        "QA"
+      ]
+    },
+    {
+      "condition": {
+        "variable":"rit_profile",
+        "operator":"==",
+        "value":"BACK-END"
+      },
+      "label": "Which tool this BACK-END professional needs to install: ",
+      "name": "rit_tool",
+      "type": "text",
+      "items": [
+        "INTELLIJ",
+        "DATAGRIP",
+        "DOCKER"
+      ]
+    },
+    {
+      "condition": {
+        "variable":"rit_profile",
+        "operator":"==",
+        "value":"FRONT-END"
+      },
+      "label": "Which tool this FRONT-END professional needs to install: ",
+      "name": "rit_tool",
+      "type": "text",
+      "items": [
+        "ATOM",
+        "CHROME DEV TOOLS",
+        "NPM"
+      ]
+    },
+    {
+      "condition": {
+        "variable":"rit_profile",
+        "operator":"==",
+        "value":"OPERATION"
+      },
+      "label": "Which tool this OPERATION professional needs to install: ",
+      "name": "rit_tool",
+      "type": "text",
+      "items": [
+        "JENKINS",
+        "CIRCLE-CI",
+        "TERRAFORM"
+      ]
+    },
+    {
+      "condition": {
+        "variable":"rit_profile",
+        "operator":"==",
+        "value":"QA"
+      },
+      "label": "Which tool this QA professional needs to install: ",
+      "name": "rit_tool",
+      "type": "text",
+      "items": [
+        "SELENIUM",
+        "POSTMAN",
+        "CUCUMBER"
+      ]
+    }
+  ]
+}

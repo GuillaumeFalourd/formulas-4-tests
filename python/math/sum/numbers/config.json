@@ -1,0 +1,16 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "label": "Number one : ",
+      "name": "number_one",
+      "type": "text",
+      "tutorial": "Digit a number without . or , (it will be converted to int afterward)"
+    },
+    {
+      "label": "Number two : ",
+      "name": "number_two",
+      "type": "text"
+    }
+  ]
+}

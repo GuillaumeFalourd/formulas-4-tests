@@ -1,0 +1,23 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "name" : "profile",
+      "type" : "text",
+      "items" : ["BACK-END", "FRONT-END", "SRE", "QA", "FULLSTACK"],
+      "label" : "Pick your profile : "
+    },
+    {
+      "name" : "need",
+      "type" : "text",
+      "items" : ["A new tool to use any script efficiently", "Independency in my daily tasks", "Less bureaucracy", "The best developer experience"],
+      "label" : "What are you looking for ? "
+    },
+    {
+      "name" : "ritchie",
+      "type" : "bool",
+      "items" : ["yes", "no"],
+      "label" : "Have you heard about Ritchie ? "
+    }
+  ]
+}

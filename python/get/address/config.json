@@ -1,0 +1,19 @@
+{
+  "dockerImageBuilder": "cimg/python:3.8",
+  "inputs": [
+    {
+      "name" : "cep",
+      "type" : "text",
+      "label" : "Type a CEP : ",
+      "pattern": {
+        "regex": "^\\d{8}$|^\\d{5}-\\d{3}$",
+        "mismatchText": "Invalid format (expected 00000000 or 00000-000)"
+      },
+      "cache" : {
+        "active": true,
+        "qtd" : 6,
+        "newLabel" : "Type a CEP value"
+      }
+    }
+  ]
+}

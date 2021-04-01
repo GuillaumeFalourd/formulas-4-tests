@@ -1,0 +1,53 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Project name:",
+      "name": "rit_project_name",
+      "type": "text"
+    },
+    {
+      "label": "Select language:",
+      "name": "rit_project_language",
+      "type": "text",
+      "items": [
+        "C#",
+        "GOLANG",
+        "JAVA",
+        "KOTLIN",
+        "NODE JS",
+        "PYTHON",
+        "RUBY",
+        "RUST",
+        "SHELL/BAT",
+        "SWIFT"
+      ]
+    },
+    {
+      "label": "Select an architecture pattern:",
+      "name": "rit_project_architecture",
+      "type": "text",
+      "items": [
+        "COMPONENT-BASED",
+        "DATA-CENTRIC",
+        "EVENT-DRIVEN",
+        "LAYERED",
+        "MICROSERVICES",
+        "MONOLITHIC",
+        "MVC",
+        "P2P",
+        "REST",
+        "SERVICE-ORIENTED"
+      ]
+    },
+    {
+      "label": "Add default dependencies?",
+      "name": "rit_project_dependencies",
+      "type": "text",
+      "items": [
+        "YES",
+        "NO"
+      ]
+    }
+  ]
+}

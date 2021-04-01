@@ -1,0 +1,34 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Type new email:",
+        "qty": 3
+      },
+      "default": "dennis.ritchie@zup.com.br",
+      "name" : "zupper_email",
+      "type" : "text",
+      "label" : "Zupper's email (ex: dennis.ritchie@zup.com.br) : "
+    },
+    {
+      "name" : "zupper_profile",
+      "type" : "text",
+      "items" : ["BACK-END", "FRONT-END", "SRE", "QA"],
+      "label" : "Zupper's profile : "
+    },
+    {
+      "name" : "zupper_pod",
+      "type" : "text",
+      "items" : ["POD X", "POD Y", "POD Z"],
+      "label" : "Zupper's POD : "
+    },
+    {
+      "name" : "zupper_project",
+      "type" : "text",
+      "items" : ["PROJECT A", "PROJECT B", "PROJECT C", "CROSS"],
+      "label" : "Zupper's project : "
+    }
+  ]
+}

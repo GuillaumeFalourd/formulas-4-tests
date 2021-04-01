@@ -1,0 +1,30 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "name" : "rit_project",
+      "type" : "text",
+      "label" : "Project name:"
+    },
+    {
+      "name" : "rit_version",
+      "type" : "text",
+      "label" : "Select version:",
+      "items" : ["2.2.0", "2.1.0", "2.0.0", "1.3.0", "1.2.0", "1.1.1", "1.1.0"]
+
+    },
+    {
+      "name" : "rit_environment",
+      "type" : "text",
+      "items" : ["DEVELOPMENT", "STAGING", "PRODUCTION"],
+      "label" : "Select environment:"
+    },
+    {
+      "name" : "rit_deployment_type",
+      "type" : "text",
+      "default" : "canary",
+      "items" : ["CANARY", "BLUE/GREEN", "ROLLING"],
+      "label" : "Select deployment type:"
+    }
+  ]
+}

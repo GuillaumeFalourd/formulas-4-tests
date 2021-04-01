@@ -1,0 +1,19 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "name": "rit_gitlab_token",
+      "type": "CREDENTIAL_GITLAB_TOKEN"
+    },
+    {
+      "name": "rit_gitlab_user",
+      "type": "CREDENTIAL_GITLAB_USERID"
+    },
+    {
+      "label": "Token name:",
+      "name": "rit_token_name",
+      "tutorial": "Ex: my-company-token",
+      "type": "text"
+    }
+  ]
+}

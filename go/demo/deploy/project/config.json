@@ -1,0 +1,34 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "cache": {
+        "active": true,
+        "newLabel": "Type new project name:",
+        "qty": 3
+      },
+      "name" : "project_name",
+      "type" : "text",
+      "label" : "Project name : "
+    },
+    {
+      "name" : "release_tag",
+      "type" : "text",
+      "label" : "Project release tag : "
+    },
+    {
+      "name" : "environment",
+      "type" : "text",
+      "default" : "qa",
+      "items" : ["dev", "qa", "prod"],
+      "label" : "Environment to deploy: "
+    },
+    {
+      "name" : "deployment_type",
+      "type" : "text",
+      "default" : "canary",
+      "items" : ["canary", "blue/green", "rolling"],
+      "label" : "Deployment type : "
+    }
+  ]
+}

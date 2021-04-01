@@ -1,0 +1,14 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Test:",
+      "name": "rit_dynamic",
+      "type": "dynamic",
+      "requestInfo": {
+            "url": "https://api.covid19api.com/countries",
+            "jsonPath": "$..Country"
+      }
+    }
+  ]
+}

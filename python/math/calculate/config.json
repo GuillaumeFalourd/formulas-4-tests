@@ -1,0 +1,24 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "label": "Number one : ",
+      "name": "number_one",
+      "type": "text"
+    },
+    {
+      "label": "Number two : ",
+      "name": "number_two",
+      "type": "text"
+    },
+    {
+      "label": "Operation : ",
+      "name": "operation",
+      "type": "text",
+      "items": [
+        "sum",
+        "multiplication"
+      ]
+    }
+  ]
+}

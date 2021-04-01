@@ -1,0 +1,25 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-java8-builder",
+  "inputs": [
+    {
+      "label": "Type the URL: ",
+      "name": "rit_url",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "newLabel": "Type new value. ",
+        "qty": 3
+      }
+    },
+    {
+      "label": "Type expected url page title: ",
+      "name": "rit_title",
+      "type": "text",
+      "cache": {
+        "active": true,
+        "newLabel": "Type new value. ",
+        "qty": 3
+      }
+    }
+  ]
+}

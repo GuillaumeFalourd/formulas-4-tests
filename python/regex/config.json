@@ -1,0 +1,14 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "What is your age? ",
+      "name": "rit_age",
+      "type": "text",
+      "pattern": {
+            "regex": "[0-9]",
+            "mismatchText": "Only a numerical value is allowed here (ex: 20)"
+      }
+    }
+  ]
+}

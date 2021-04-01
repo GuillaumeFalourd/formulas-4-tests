@@ -1,0 +1,15 @@
+{
+  "dockerImageBuilder": "cimg/go:1.14",
+  "inputs": [
+    {
+      "name" : "cep",
+      "type" : "text",
+      "label" : "Type a CEP : ",
+      "cache" : {
+        "active": true,
+        "qtd" : 6,
+        "newLabel" : "Type a CEP value"
+      }
+    }
+  ]
+}
