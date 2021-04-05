@@ -1,0 +1,16 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [
+    {
+      "label": "Send Grid API Key: ",
+      "name": "sendgrid_api_key",
+      "required": true,
+      "type": "text",
+      "cache": {
+        "active": true,
+        "newLabel": "Type new value. ",
+        "qty": 3
+      }
+    }
+  ]
+}
