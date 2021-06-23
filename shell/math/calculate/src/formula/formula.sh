@@ -1,8 +1,8 @@
 #!/bin/sh
 runFormula() {
-  if [ "sum" -eq $OPERATION ]; then
+  if [[ "sum" = $OPERATION ]]; then
     echo "rit shell math sum numbers --rit_number_one=$RIT_NUMBER_ONE --rit_number_two=$RIT_NUMBER_TWO"
-  elif [ "multiplication" -eq $OPERATION ]; then
+  elif [[ "multiplication" = $OPERATION ]]; then
     echo "rit shell math multiply numbers --rit_number_one=$RIT_NUMBER_ONE --rit_number_two=$RIT_NUMBER_TWO"
   else
     echo "Unexpected operation type: $OPERATION"
