@@ -1,19 +1,19 @@
 {
-  "dockerImageBuilder": "cimg/go:1.14",
+  "dockerImageBuilder": "ritclizup/rit-go-builder",
   "inputs": [
     {
       "label": "Number one : ",
-      "name": "number_one",
+      "name": "rit_number_one",
       "type": "text"
     },
     {
       "label": "Number two : ",
-      "name": "number_two",
+      "name": "rit_number_two",
       "type": "text"
     },
     {
       "label": "Operation : ",
-      "name": "operation",
+      "name": "rit_operation",
       "type": "text",
       "items": [
         "sum",

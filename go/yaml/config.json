@@ -1,0 +1,22 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-go-builder",
+  "inputs": [
+    {
+      "label": "Username: ",
+      "name": "username",
+      "type": "text"
+    },
+    {
+      "label": "Type the project name: ",
+      "name": "project_name",
+      "type": "text",
+      "tutorial": "Project name e.g.: awesome-project"
+    },
+    {
+      "label": "Type the location: ",
+      "name": "project_location",
+      "type": "text",
+      "tutorial": "Project location e.g.: /home/user/projects"
+    }
+  ]
+}

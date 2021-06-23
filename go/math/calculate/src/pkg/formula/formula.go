@@ -2,7 +2,7 @@ package formula
 
 import (
 	"fmt"
-	"os"
+	"log"
 	"os/exec"
 )
 
@@ -13,66 +13,38 @@ type Formula struct {
 }
 
 func (h Formula) Run() {
-
-	json := fmt.Sprintf("'{\"number_one\":\"" + h.NumberOne + "\", \"number_two\":\"" + h.NumberTwo + "\"}'")
+	cmdLine := exec.Command("", "")
 
 	switch h.Operation {
 	case "sum":
-		cmdLine := "rit go math sum numbers --stdin"
-		stdinExec(json, cmdLine)
+		cmdLine = exec.Command(
+			"rit",
+			"go",
+			"math",
+			"sum",
+			"numbers",
+			fmt.Sprintf("--rit_number_one=%s", h.NumberOne),
+			fmt.Sprintf("--rit_number_two=%s", h.NumberTwo),
+		)
 	case "multiplication":
-		cmdLine := "rit go math multiply numbers --stdin"
-		stdinExec(json, cmdLine)
+		cmdLine = exec.Command(
+			"rit",
+			"go",
+			"math",
+			"multiply",
+			"numbers",
+			fmt.Sprintf("--rit_number_one=%s", h.NumberOne),
+			fmt.Sprintf("--rit_number_two=%s", h.NumberTwo),
+		)
 	default:
-		fmt.Printf("Unexpected operation type:", h.Operation)
-	}
-}
-
-func stdinExec(json string, cmdLine string) {
-
-	echo := "echo"
-	arg0 := json
-	arg1 := "|"
-	arg2 := cmdLine
-
-	cmdStdin := &exec.Cmd{
-		Path:   os.Getenv("CURRENT_PWD"),
-		Args:   []string{"bash", echo, arg0, arg1, arg2},
-		Stdout: os.Stdout,
-		Stderr: os.Stdout,
+		fmt.Print("Unexpected operation type:", h.Operation)
 	}
 
-	fmt.Println(cmdStdin.String())
-
-	err := cmdStdin.Run() //TODO: Make it work!
+	out, err := cmdLine.CombinedOutput()
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalf("cmd.Run() failed with %s\n", err)
 	}
 
-	//cmd := exec.Command("bash", echo, arg0, arg1, arg2)
-	//cmd.Dir = os.Getenv("CURRENT_PWD")
-	//var out bytes.Buffer
-	//var stderr bytes.Buffer
-	//cmd.Stdout = &out
-	//cmd.Stderr = &stderr
-	//err := cmd.Run()
-	//if err != nil {
-	//	fmt.Println(fmt.Sprint(err) + ": " + stderr.String())
-	//}
-	//fmt.Println("Result: " + out.String())
+	fmt.Printf(string(out))
 
-	//cmd := exec.Command(cmdLine)
-	//err := cmd.Run()
-	//if err != nil {
-	//	println("Error", err)
-	//}
-
-	//stdout, err := cmd.Output()
-
-	//if err != nil {
-	//	println("Error:", err)
-	//	return
-	//}
-
-	//println("Output:", string(stdout))
 }

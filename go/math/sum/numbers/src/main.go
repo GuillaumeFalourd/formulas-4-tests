@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	input1, _ := strconv.Atoi(os.Getenv("NUMBER_ONE"))
-	input2, _ := strconv.Atoi(os.Getenv("NUMBER_TWO"))
+	input1, _ := strconv.Atoi(os.Getenv("RIT_NUMBER_ONE"))
+	input2, _ := strconv.Atoi(os.Getenv("RIT_NUMBER_TWO"))
 
 	formula.Formula{
 		NumberOne: input1,

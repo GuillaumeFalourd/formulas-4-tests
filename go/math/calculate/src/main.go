@@ -6,13 +6,13 @@ import (
 )
 
 func main() {
-	input1 := os.Getenv("NUMBER_ONE")
-	input2 := os.Getenv("NUMBER_TWO")
-	input3 := os.Getenv("OPERATION")
+	numberOne := os.Getenv("RIT_NUMBER_ONE")
+	numberTwo := os.Getenv("RIT_NUMBER_TWO")
+	operation := os.Getenv("RIT_OPERATION")
 
 	formula.Formula{
-		NumberOne: input1,
-		NumberTwo: input2,
-		Operation: input3,
+		NumberOne: numberOne,
+		NumberTwo: numberTwo,
+		Operation: operation,
 	}.Run()
 }

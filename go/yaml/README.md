@@ -3,7 +3,7 @@
 ## Command
 
 ```bash
-rit math calculate
+rit go yaml
 ```
 
 ## Description
