@@ -1,0 +1,24 @@
+{
+  "dockerImageBuilder": "cimg/base:stable-20.04",
+  "inputs": [
+    {
+      "label": "Number one : ",
+      "name": "rit_number_one",
+      "type": "text"
+    },
+    {
+      "label": "Number two : ",
+      "name": "rit_number_two",
+      "type": "text"
+    },
+    {
+      "label": "Operation : ",
+      "name": "rit_operation",
+      "type": "text",
+      "items": [
+        "sum",
+        "multiplication"
+      ]
+    }
+  ]
+}
