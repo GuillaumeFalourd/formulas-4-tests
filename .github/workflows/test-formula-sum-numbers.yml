@@ -1,4 +1,4 @@
-name: Formulas Sum Numbers
+name: Formula Sum Numbers
 
 on:
   push:
@@ -12,11 +12,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Ritchie Installation & Initialization
-        run: |
-            curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
-            echo '{"addCommons":false, "sendMetrics":false, "runType":"local"}' | rit init --stdin
-      - name: Add formula repository as workspace
+      - name: Ritchie Installation
+        run: curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+      - name: Ritchie Initialization
+        run: echo '{"addCommons":false, "sendMetrics":false, "runType":"local"}' | rit init --stdin
+      - name: Add current formula repository as workspace
         run: rit add workspace --name="current_repo" --path="./"
       - uses: GuillaumeFalourd/test-cli-commands-action@v1
         with:
