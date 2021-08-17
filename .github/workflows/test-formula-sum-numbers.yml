@@ -1,0 +1,25 @@
+name: Formulas Sum Numbers
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  formula-sum-numbers-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Ritchie Installation & Initialization
+        run: |
+            curl -fsSL https://commons-repo.ritchiecli.io/install.sh | bash
+            echo '{"addCommons":false, "sendMetrics":false, "runType":"local"}' | rit init --stdin
+      - name: Add formula repository as workspace
+        run: rit add workspace --name="current_repo" --path="./"
+      - uses: GuillaumeFalourd/test-cli-commands-action@v1
+        with:
+          command_line: rit python math sum numbers --number_one=1 --number_two=2
+          contains: The sum is 3
+          expected_result: PASSED
