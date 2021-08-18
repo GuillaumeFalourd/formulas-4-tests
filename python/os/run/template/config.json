@@ -1,0 +1,6 @@
+{
+  "dockerImageBuilder": "ritclizup/rit-python3-builder",
+  "inputs": [ ],
+  "template": "python3",
+  "templateRelease": "2.16.2"
+}
